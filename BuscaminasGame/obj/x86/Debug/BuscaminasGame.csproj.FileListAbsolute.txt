@@ -1,0 +1,6 @@
+c:\users\paniaq\documents\visual studio 2010\Projects\BuscaminasGame\BuscaminasGame\bin\Debug\BuscaminasGame.exe
+c:\users\paniaq\documents\visual studio 2010\Projects\BuscaminasGame\BuscaminasGame\bin\Debug\BuscaminasGame.pdb
+c:\users\paniaq\documents\visual studio 2010\Projects\BuscaminasGame\BuscaminasGame\obj\x86\Debug\BuscaminasGame.Properties.Resources.resources
+c:\users\paniaq\documents\visual studio 2010\Projects\BuscaminasGame\BuscaminasGame\obj\x86\Debug\BuscaminasGame.csproj.GenerateResource.Cache
+c:\users\paniaq\documents\visual studio 2010\Projects\BuscaminasGame\BuscaminasGame\obj\x86\Debug\BuscaminasGame.exe
+c:\users\paniaq\documents\visual studio 2010\Projects\BuscaminasGame\BuscaminasGame\obj\x86\Debug\BuscaminasGame.pdb
