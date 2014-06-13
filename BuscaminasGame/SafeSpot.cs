@@ -9,6 +9,7 @@ namespace BuscaminasGame
     {
         private int mines;        
 
+        //Contructor
         public SafeSpot()
         {
             this.mines = 0;
