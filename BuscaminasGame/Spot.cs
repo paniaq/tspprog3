@@ -9,12 +9,26 @@ namespace BuscaminasGame
     {
         private bool discovered;
         private bool flag;
+        private int x;
+        private int y;
         
         //Constructor
-        public Spot()
+        public Spot(int x, int y)
         {
+            this.x = x;
+            this.y = y;
             this.discovered = false;
             this.flag = false;
+        }
+
+        public int GetX() 
+        {
+            return this.x;
+        }
+
+        public int GetY() 
+        {
+            return this.y;
         }
 
         public bool IsDiscovered() 
@@ -43,9 +57,10 @@ namespace BuscaminasGame
             }
         }
 
-        public bool Cascade()
+        public bool Cascade(IBoard board) 
         {
             return true;
         }
+        
     }
 }

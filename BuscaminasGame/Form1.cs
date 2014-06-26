@@ -11,6 +11,8 @@ namespace BuscaminasGame
 {
     public partial class Form1 : Form
     {
+        private IGame game;
+        private IPlayer player;
         private int boardSize;
         private Button[,] grid;
 
@@ -85,6 +87,17 @@ namespace BuscaminasGame
                 }
 
             }
+
+        }
+
+        private void ButtonNewGame_Click(object sender, EventArgs e)
+        {
+
+            this.player = new Player("Gabril");
+            this.game = new Game(player);
+            this.game.NewGame(new Difficulty(8, 50));
+
+            MessageBox.Show(game.GetBoard().ToString());
 
         }
 

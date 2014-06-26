@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BuscaminasGame
 {
-    class Player
+    public class Player : IPlayer
     {
 
         private string name;

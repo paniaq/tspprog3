@@ -5,8 +5,16 @@ using System.Text;
 
 namespace BuscaminasGame
 {
-    public interface ICascadable
+    public interface IPlayer
     {
-        bool Cascade(IBoard board);
+
+        string GetName();
+
+        int Score
+        {
+            get;
+            set;
+        }
+
     }
 }

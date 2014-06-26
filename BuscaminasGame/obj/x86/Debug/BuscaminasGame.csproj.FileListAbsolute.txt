@@ -12,3 +12,11 @@ E:\Prog3\tspprog3\BuscaminasGame\obj\x86\Debug\BuscaminasGame.Properties.Resourc
 E:\Prog3\tspprog3\BuscaminasGame\obj\x86\Debug\BuscaminasGame.csproj.GenerateResource.Cache
 E:\Prog3\tspprog3\BuscaminasGame\bin\Debug\BuscaminasGame.exe
 E:\Prog3\tspprog3\BuscaminasGame\bin\Debug\BuscaminasGame.pdb
+C:\Users\Paniaq\Documents\Visual Studio 2010\Projects\tspprog3\BuscaminasGame\obj\x86\Debug\BuscaminasGame.exe
+C:\Users\Paniaq\Documents\Visual Studio 2010\Projects\tspprog3\BuscaminasGame\obj\x86\Debug\BuscaminasGame.pdb
+C:\Users\Paniaq\Documents\Visual Studio 2010\Projects\tspprog3\BuscaminasGame\bin\Debug\BuscaminasGame.exe
+C:\Users\Paniaq\Documents\Visual Studio 2010\Projects\tspprog3\BuscaminasGame\bin\Debug\BuscaminasGame.pdb
+C:\Users\Paniaq\Documents\Visual Studio 2010\Projects\tspprog3\BuscaminasGame\obj\x86\Debug\BuscaminasGame.csprojResolveAssemblyReference.cache
+C:\Users\Paniaq\Documents\Visual Studio 2010\Projects\tspprog3\BuscaminasGame\obj\x86\Debug\BuscaminasGame.Form1.resources
+C:\Users\Paniaq\Documents\Visual Studio 2010\Projects\tspprog3\BuscaminasGame\obj\x86\Debug\BuscaminasGame.Properties.Resources.resources
+C:\Users\Paniaq\Documents\Visual Studio 2010\Projects\tspprog3\BuscaminasGame\obj\x86\Debug\BuscaminasGame.csproj.GenerateResource.Cache

@@ -5,12 +5,22 @@ using System.Text;
 
 namespace BuscaminasGame
 {
-    class Mine 
+    public class Mine : Spot
     {
 
-        new public bool Cascade()
+        public Mine(int x, int y) : base(x, y) 
+        {
+
+        }
+
+        public bool Cascade() 
         {
             return false;
+        }
+
+        override public string ToString() 
+        {
+            return "M";
         }
 
     }

@@ -5,8 +5,14 @@ using System.Text;
 
 namespace BuscaminasGame
 {
-    public interface ICascadable
+    public interface IBoard
     {
-        bool Cascade(IBoard board);
+
+        void InitBoard(int mines);
+
+        Spot GetSpotAt(int x, int y);
+
+        int GetLength();
+
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BuscaminasGame
 {
-    class ScoreBoard
+    public class ScoreBoard
     {
     }
 }

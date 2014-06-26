@@ -5,25 +5,41 @@ using System.Text;
 
 namespace BuscaminasGame
 {
-    class Game
+    public class Game : IGame
     {
-        private Player player;
-        private Board board;
+        private IPlayer player;
+        private IBoard board;
 
         //Constructor
-        public Game(Player player)
+        public Game(IPlayer player)
         {
             this.player = player;
         }
 
-        public Player GetPlayer()
+        public IPlayer GetPlayer()
         {
             return this.player;
         }
 
-        public Board GetBoard()
+        public IBoard GetBoard()
         {
             return this.board;
+        }
+
+        public void NewGame(Difficulty difficulty) {
+
+            this.board = new Board(difficulty);
+
+        }
+
+        public bool Click(int x, int y) {
+
+            Spot discoveredSpot = this.board.GetSpotAt(x, y);
+
+            discoveredSpot.Discover();
+
+            return discoveredSpot.Cascade(this.board);
+
         }
     }
 }
