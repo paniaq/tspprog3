@@ -4,3 +4,11 @@ c:\users\paniaq\documents\visual studio 2010\Projects\BuscaminasGame\BuscaminasG
 c:\users\paniaq\documents\visual studio 2010\Projects\BuscaminasGame\BuscaminasGame\obj\x86\Debug\BuscaminasGame.csproj.GenerateResource.Cache
 c:\users\paniaq\documents\visual studio 2010\Projects\BuscaminasGame\BuscaminasGame\obj\x86\Debug\BuscaminasGame.exe
 c:\users\paniaq\documents\visual studio 2010\Projects\BuscaminasGame\BuscaminasGame\obj\x86\Debug\BuscaminasGame.pdb
+E:\Prog3\tspprog3\BuscaminasGame\obj\x86\Debug\BuscaminasGame.exe
+E:\Prog3\tspprog3\BuscaminasGame\obj\x86\Debug\BuscaminasGame.pdb
+E:\Prog3\tspprog3\BuscaminasGame\obj\x86\Debug\BuscaminasGame.csprojResolveAssemblyReference.cache
+E:\Prog3\tspprog3\BuscaminasGame\obj\x86\Debug\BuscaminasGame.Form1.resources
+E:\Prog3\tspprog3\BuscaminasGame\obj\x86\Debug\BuscaminasGame.Properties.Resources.resources
+E:\Prog3\tspprog3\BuscaminasGame\obj\x86\Debug\BuscaminasGame.csproj.GenerateResource.Cache
+E:\Prog3\tspprog3\BuscaminasGame\bin\Debug\BuscaminasGame.exe
+E:\Prog3\tspprog3\BuscaminasGame\bin\Debug\BuscaminasGame.pdb
