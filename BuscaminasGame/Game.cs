@@ -34,9 +34,7 @@ namespace BuscaminasGame
 
         public bool Click(int x, int y) {
 
-            Spot discoveredSpot = this.board.GetSpotAt(x, y);
-
-            discoveredSpot.Discover();
+            ICascadable discoveredSpot = this.board.GetSpotAt(x, y);
 
             return discoveredSpot.Cascade(this.board);
 

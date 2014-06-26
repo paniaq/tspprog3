@@ -57,10 +57,7 @@ namespace BuscaminasGame
             }
         }
 
-        public bool Cascade(IBoard board) 
-        {
-            return true;
-        }
+        abstract public bool Cascade(IBoard board);
         
     }
 }

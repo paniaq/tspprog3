@@ -13,7 +13,7 @@ namespace BuscaminasGame
 
         }
 
-        public bool Cascade() 
+        public override bool Cascade(IBoard board) 
         {
             return false;
         }

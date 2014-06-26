@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BuscaminasGame
 {
-    public class SafeSpot : Spot, ICascadable
+    public class SafeSpot : Spot
     {
         private int mines;        
 
@@ -21,7 +21,7 @@ namespace BuscaminasGame
             set { mines = value; }
         }
 
-        public bool Cascade(Board board)
+        public override bool Cascade(IBoard board)
         {
 
             if(this.mines != 0 || this.IsDiscovered() || this.HasFlag()) 
@@ -45,14 +45,14 @@ namespace BuscaminasGame
 
                     //Estoy dentro del tablero?
 
-                    if (this.GetX() + x < 0 && this.GetX() + x >= board.GetLength())
+                    if (this.GetX() + x >= 0 && this.GetX() + x <= board.GetLength())
                     {
-                        if (this.GetY() + y < 0 && this.GetY() + y >= board.GetLength())
+                        if (this.GetY() + y >= 0 && this.GetY() + y <= board.GetLength())
                         {
 
                             //Soy yo mismo?
 
-                            if (x != 0 && y != 0)
+                            if (x != 0 || y != 0)
                             {
 
                                 board.GetSpotAt(this.GetX() + x, this.GetY() + y).Cascade(board);
@@ -78,11 +78,6 @@ namespace BuscaminasGame
 
             return true;
 
-        }
-
-        override public string ToString()
-        {
-            return this.mines.ToString();
         }
     }
 }
