@@ -48,10 +48,10 @@
   <ItemGroup>
     <Compile Include="Board.cs" />
     <Compile Include="Difficulty.cs" />
-    <Compile Include="IBoard.cs" />
     <Compile Include="ICascadable.cs" />
     <Compile Include="IGame.cs" />
     <Compile Include="IPlayer.cs" />
+    <Compile Include="PlayerAdapter.cs" />
     <Compile Include="SafeSpot.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

@@ -7,6 +7,6 @@ namespace BuscaminasGame
 {
     public interface ICascadable
     {
-        bool Cascade(IBoard board);
+        bool Cascade(Board board);
     }
 }

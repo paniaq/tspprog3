@@ -5,6 +5,7 @@ using System.Text;
 
 namespace BuscaminasGame
 {
+    [Serializable]
     public class SafeSpot : Spot
     {
         private int mines;        
@@ -21,63 +22,46 @@ namespace BuscaminasGame
             set { mines = value; }
         }
 
-        public override bool Cascade(IBoard board)
+        public override bool Cascade(Board board)
         {
 
             if(this.mines != 0 || this.IsDiscovered() || this.HasFlag()) 
             {
+                this.Discover();
                 return true;
             }
 
-            this.Discover();
+            this.Discover();            
 
-            int x = -1;
-            int y = -1;
-
-            int c1 = 3;
-            int c2 = 3;
-
-            while (c1 != 0)
+            for (int i = this.GetX() - 1; i <= this.GetX() + 1; i++)
             {
-
-                while (c2 != 0)
+                for (int j = this.GetY() - 1; j <= this.GetY() + 1; j++)
                 {
-
-                    //Estoy dentro del tablero?
-
-                    if (this.GetX() + x >= 0 && this.GetX() + x <= board.GetLength())
+                    if ((i >= 0) && (i < board.GetLength() && (j >= 0) && (j < board.GetLength())))
                     {
-                        if (this.GetY() + y >= 0 && this.GetY() + y <= board.GetLength())
+
+                        if (!(i == this.GetX() && j == this.GetY()))
                         {
-
-                            //Soy yo mismo?
-
-                            if (x != 0 || y != 0)
+                            if (board.GetSpotAt(i,j) is SafeSpot)
                             {
-
-                                board.GetSpotAt(this.GetX() + x, this.GetY() + y).Cascade(board);
+                                if (((SafeSpot)board.GetSpotAt(i, j)).Mines == 0)
+                                {
+                                    board.GetSpotAt(i, j).Cascade(board);
+                                }
+                                else
+                                {
+                                    board.GetSpotAt(i, j).Discover();
+                                }
 
                             }
-
                         }
-
                     }
-
-                    c2--;
-                    y++;
-
                 }
-
-                x++;
-                c1--;
-
-                c2 = 3;
-                y = -1;
-
             }
 
             return true;
 
         }
+        
     }
 }

@@ -10,11 +10,15 @@ namespace BuscaminasGame
 
         void NewGame(Difficulty difficulty);
 
-        IPlayer GetPlayer();
+        void SaveGameState();
 
-        IBoard GetBoard();
+        IGame ResumeGame();
 
-        bool Click(int x, int y);
+        Board GetBoard();
+
+        bool Click(int x, int y, bool flag);
+
+        void GameOver();        
 
     }
 }

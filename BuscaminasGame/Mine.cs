@@ -5,6 +5,7 @@ using System.Text;
 
 namespace BuscaminasGame
 {
+    [Serializable]
     public class Mine : Spot
     {
 
@@ -13,15 +14,11 @@ namespace BuscaminasGame
 
         }
 
-        public override bool Cascade(IBoard board) 
+        public override bool Cascade(Board board) 
         {
+            this.Discover();
             return false;
-        }
-
-        override public string ToString() 
-        {
-            return "M";
-        }
+        }        
 
     }
 }

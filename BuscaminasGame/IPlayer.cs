@@ -5,10 +5,14 @@ using System.Text;
 
 namespace BuscaminasGame
 {
-    public interface IPlayer
+    public interface IPlayer : IComparable<IPlayer>
     {
 
-        string GetName();
+        string Name 
+        {
+            get;
+            set;
+        }
 
         int Score
         {

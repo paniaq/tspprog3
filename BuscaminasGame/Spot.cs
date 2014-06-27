@@ -5,6 +5,7 @@ using System.Text;
 
 namespace BuscaminasGame
 {
+    [Serializable]
     public abstract class Spot : ICascadable
     {
         private bool discovered;
@@ -49,15 +50,15 @@ namespace BuscaminasGame
             }
         }
 
-        public void PutFlag()
+        public void ToggleFlag()
         {
             if (!discovered)
             {
-                flag = true;
+                flag = !flag;
             }
         }
 
-        abstract public bool Cascade(IBoard board);
+        abstract public bool Cascade(Board board);
         
     }
 }

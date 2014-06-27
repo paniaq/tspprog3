@@ -5,6 +5,7 @@ using System.Text;
 
 namespace BuscaminasGame
 {
+    [Serializable]
     public class Difficulty
     {
         private int spots;        

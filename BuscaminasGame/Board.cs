@@ -5,21 +5,30 @@ using System.Text;
 
 namespace BuscaminasGame
 {
-    public class Board : IBoard
+    [Serializable]
+    public class Board
     {
-        Spot[,] spotlist;
+        private Spot[,] spotlist;
+        private Difficulty difficulty;
 
         public Board(Difficulty difficulty)
         {
+
+            this.difficulty = difficulty;
+
             int spots = difficulty.GetSpots();
 
-            this.spotlist = new Spot[spots,spots];
-
-            this.InitBoard(difficulty.GetMines());
+            this.spotlist = new Spot[spots,spots];            
 
         }
 
-        public void InitBoard(int mines) {
+        public Spot[,] SpotList 
+        {
+            get { return this.spotlist; }
+            set { this.spotlist = value;}
+        }
+
+        public void InitBoard() {
 
             for (int i = 0; i < this.spotlist.GetLength(0); i++) {
 
@@ -32,7 +41,7 @@ namespace BuscaminasGame
 
             }
 
-            for(int i = 0; i < mines; i++) {
+            for(int i = 0; i < this.difficulty.GetMines(); i++) {
 
                 Random rand = new Random();
 
@@ -114,26 +123,5 @@ namespace BuscaminasGame
             return this.spotlist.GetLength(0);
         }
 
-        override public string ToString() 
-        {
-            string s = "";
-
-            for (int i = 0; i < this.spotlist.GetLength(0); i++)
-            {
-
-                for (int j = 0; j < this.spotlist.GetLength(0); j++)
-                {
-
-                    s += this.spotlist[i, j].ToString();
-                    s += "\t";
-
-                }
-
-                s += "\n";
-
-            }
-
-            return s;
-        }
     }
 }

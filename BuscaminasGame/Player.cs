@@ -14,19 +14,36 @@ namespace BuscaminasGame
         //Constructor
         public Player(string n)
         {
-            this.name = n;
+            this.name = n.Replace("@", " ");
             this.score = 0;
         }
 
-        public string GetName()
+        public string Name
         {
-            return this.name;
+            get { return name; }
+            set { name = value.Replace("@", " "); }
         }
 
         public int Score
         {
             get { return score; }
             set { score = value; }
+        }
+
+        public int CompareTo(IPlayer other)
+        {
+            if(this.Score > other.Score) 
+            {
+                return 1;
+            }
+            else if (this.Score < other.Score)
+            {
+                return -1;
+            }
+            else 
+            {
+                return 0;
+            }
         }
     }
 }
