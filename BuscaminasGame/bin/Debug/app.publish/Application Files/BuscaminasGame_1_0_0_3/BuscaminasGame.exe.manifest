@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="BuscaminasGame.exe" version="1.0.0.3" publicKeyToken="e1392e534a0fe14e" language="neutral" processorArchitecture="x86" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="BuscaminasGame" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="BuscaminasGame.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BuscaminasGame.exe" size="24576">
+      <assemblyIdentity name="BuscaminasGame" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>wgX/usuS87Z78Br5V7myFtq9p4k=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+<publisherIdentity name="CN=GABRIEL-DESKTOP\Gabriel" issuerKeyHash="882a3cf45af48ce5f05102c7edf30cad9f60288f" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>NZ4/+xgNIVsieLskOa27wludNCc=</DigestValue></Reference></SignedInfo><SignatureValue>tGenfGuJQ+DqA2XVcuvQjqrX6YxxVh7EUs996DP3UmhBV08LZuiqKizZUqY3iSiAtirD01ztHQjJEeXt0Q3u9SGK2NYaif94T17dSIze7r0Dnf+b8Nj/n2g9F3DxI2w6nCXKY6BJbzAVkSevGMZ8wt9lvoobigz+aRsMM5Mf0UA=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>xLGXimNL6iTig3hpr8UZLpUjXxB3Xheai7XcC/lPmVaqy0MQL4jolJu/zSwTfr1kV1sYHewH0FEvl8eww8at9s8wMJQKRVqWAr6QlRieUwj+ytjZElNUyKXElegQzjlznmshXTN0EmsjhkW+SxqFTdPsSCvv4wBdLAaM76Hk2ws=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="27349d5bc2bbad3924bb78225b210d18fb3f9e35" Description="" Url=""><as:assemblyIdentity name="BuscaminasGame.exe" version="1.0.0.3" publicKeyToken="e1392e534a0fe14e" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=GABRIEL-DESKTOP\Gabriel</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>QRvJrAfvxHdIiIg3Cmdq1CWrLnw=</DigestValue></Reference></SignedInfo><SignatureValue>ouLSkTr86KYDYPLOVT9vNIkuD3XdD3E0mP2CR8TqQXGeBHSRBuvYkgrdiZoz2p6LF0mO4QFcpwuB4o6gNm2EXpBbFGumaEhJyXI+wdKM5wzBtUstZu1/I/rxbw9CRwx/xttaqNlk36OCqa7xezXMUglpDDTqC2qY+MhcZLu7HiM=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>xLGXimNL6iTig3hpr8UZLpUjXxB3Xheai7XcC/lPmVaqy0MQL4jolJu/zSwTfr1kV1sYHewH0FEvl8eww8at9s8wMJQKRVqWAr6QlRieUwj+ytjZElNUyKXElegQzjlznmshXTN0EmsjhkW+SxqFTdPsSCvv4wBdLAaM76Hk2ws=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB9TCCAV6gAwIBAgIQUb6IThnthqlKyH3TiKGkpjANBgkqhkiG9w0BAQUFADA5MTcwNQYDVQQDHi4ARwBBAEIAUgBJAEUATAAtAEQARQBTAEsAVABPAFAAXABHAGEAYgByAGkAZQBsMB4XDTE0MDYyODAyMDYwOVoXDTE1MDYyODA4MDYwOVowOTE3MDUGA1UEAx4uAEcAQQBCAFIASQBFAEwALQBEAEUAUwBLAFQATwBQAFwARwBhAGIAcgBpAGUAbDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAxLGXimNL6iTig3hpr8UZLpUjXxB3Xheai7XcC/lPmVaqy0MQL4jolJu/zSwTfr1kV1sYHewH0FEvl8eww8at9s8wMJQKRVqWAr6QlRieUwj+ytjZElNUyKXElegQzjlznmshXTN0EmsjhkW+SxqFTdPsSCvv4wBdLAaM76Hk2wsCAwEAATANBgkqhkiG9w0BAQUFAAOBgQCaBhdM8uqjyZ5hCNMixywot+9Mksu9Q0W4V0Wd5DFSKz/zGKUNGI2cY5bAwI2rdoddH/+gB/+8263on7UnJdOsfBOP0D2cPE/siuZXXqjReAEvfc+/TQL/fOyzZ/AuQf4dcb73E6shtXETft7uOzqxyZOpih0MBTrMJgxYzejUxQ==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

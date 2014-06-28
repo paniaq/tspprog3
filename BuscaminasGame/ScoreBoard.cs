@@ -30,17 +30,21 @@ namespace BuscaminasGame
 
             if (File.Exists(this.currentDir + this.fileName))
             {
+
+
                 string[] scores = File.ReadAllLines(this.currentDir + this.fileName);
 
                 if (scores.Length != 0) 
                 {
                     playerList = PlayerAdapter.ScoreToPlayer(scores);
-                }                
+                }
+
             }
             else 
             {
-                File.Create(this.currentDir + this.fileName);                
-            }            
+                FileStream fileStream = File.Create(this.currentDir + this.fileName);
+                fileStream.Close();
+            }                        
 
             return playerList;
 
@@ -64,6 +68,11 @@ namespace BuscaminasGame
                 playerList.Add(player);
                 playerList.Sort();
                 playerList.Reverse();
+
+                if(playerList.Count > 10) 
+                {
+                    playerList.RemoveRange(9, playerList.Count - 1);
+                }
 
                 string[] scores = PlayerAdapter.PlayerToScore(playerList);
 

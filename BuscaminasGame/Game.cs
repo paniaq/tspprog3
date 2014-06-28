@@ -14,11 +14,32 @@ namespace BuscaminasGame
     {
         private Board board;
         private Difficulty difficulty;
+        private int time;
+        private bool isOver;
+        private int minesRemaining;
 
         //Constructor
         public Game()
         {
+            this.time = 0;
+            this.isOver = false;
+        }
 
+        public bool IsOver
+        {
+            get { return this.isOver; }
+            set { this.isOver = value; }
+        }
+
+        public int AvailableFlags()
+        {
+            return this.minesRemaining;
+        }
+
+        public int Time 
+        {
+            get { return this.time; }
+            set { this.time = value; }
         }
 
         public Board GetBoard()
@@ -30,22 +51,39 @@ namespace BuscaminasGame
 
             this.difficulty = difficulty;
 
+            this.minesRemaining = this.difficulty.GetMines();
+
             this.board = new Board(difficulty);
             this.board.InitBoard();
 
+
         }
 
-        public void SaveGameState()
+        public void SaveGameState(int time)
         {
-
             string currentDir = Directory.GetCurrentDirectory().ToString();
 
-            IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream(currentDir + "/game.bin",
-                                     FileMode.Create,
-                                     FileAccess.Write, FileShare.None);
-            formatter.Serialize(stream, this);
-            stream.Close();
+            if (!this.isOver)
+            {
+
+                this.time = time;
+
+                IFormatter formatter = new BinaryFormatter();
+                Stream stream = new FileStream(currentDir + "/game.bin",
+                                         FileMode.Create,
+                                         FileAccess.Write, FileShare.None);
+                formatter.Serialize(stream, this);
+                stream.Close();
+
+            }
+            else 
+            {
+                if(File.Exists(currentDir + "/game.bin")) 
+                {
+                    File.Delete(currentDir + "/game.bin");
+                }
+            }
+            
             
         }
 
@@ -55,15 +93,22 @@ namespace BuscaminasGame
 
             IGame game = null;
 
-            if (File.Exists(currentDir + "/game.bin") || new FileInfo(currentDir + "/game.bin").Length == 0) 
+            if (File.Exists(currentDir + "/game.bin")) 
             {
-                IFormatter formatter = new BinaryFormatter();
-                Stream stream = new FileStream(currentDir + "/game.bin",
-                                          FileMode.Open,
-                                          FileAccess.Read,
-                                          FileShare.Read);
-                game = (Game)formatter.Deserialize(stream);
-                stream.Close();
+
+                if (new FileInfo(currentDir + "/game.bin").Length != 0) 
+                {
+
+                    IFormatter formatter = new BinaryFormatter();
+                    Stream stream = new FileStream(currentDir + "/game.bin",
+                                              FileMode.Open,
+                                              FileAccess.Read,
+                                              FileShare.Read);
+                    game = (Game)formatter.Deserialize(stream);
+                    stream.Close();
+
+                }
+                
             }
 
             return game;
@@ -85,15 +130,41 @@ namespace BuscaminasGame
             else 
             {
                 Spot spotToFlag = this.board.GetSpotAt(x, y);
+
+                if (!spotToFlag.HasFlag())
+                {
+                    if (spotToFlag is Mine)
+                    {
+                        this.minesRemaining--;                        
+                    }
+
+                }
+                else 
+                {
+                    if(spotToFlag is Mine) 
+                    {
+                        this.minesRemaining++;
+                    }
+                }
+
                 spotToFlag.ToggleFlag();
+
+                if(this.minesRemaining == 0) 
+                {
+                    return false;
+                }
+
                 return true;
             }
 
 
         }
 
-        public void GameOver() 
+        public bool GameOver() 
         {
+
+            this.isOver = true;
+
             for (int i = 0; i < this.board.GetLength(); i++)
             {
                 for (int j = 0; j < this.board.GetLength(); j++)
@@ -108,6 +179,16 @@ namespace BuscaminasGame
 
                 }
             }
+
+            if (this.minesRemaining == 0)
+            {
+                return true;
+            }
+            else 
+            {
+                return false;
+            }
+
         }
 
         

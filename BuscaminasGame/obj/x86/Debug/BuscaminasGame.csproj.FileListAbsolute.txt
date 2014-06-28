@@ -20,3 +20,9 @@ C:\Users\Paniaq\Documents\Visual Studio 2010\Projects\tspprog3\BuscaminasGame\ob
 C:\Users\Paniaq\Documents\Visual Studio 2010\Projects\tspprog3\BuscaminasGame\obj\x86\Debug\BuscaminasGame.Form1.resources
 C:\Users\Paniaq\Documents\Visual Studio 2010\Projects\tspprog3\BuscaminasGame\obj\x86\Debug\BuscaminasGame.Properties.Resources.resources
 C:\Users\Paniaq\Documents\Visual Studio 2010\Projects\tspprog3\BuscaminasGame\obj\x86\Debug\BuscaminasGame.csproj.GenerateResource.Cache
+E:\Prog3\tspprog3\BuscaminasGame\obj\x86\Debug\BuscaminasGame.Scores.resources
+E:\Prog3\tspprog3\BuscaminasGame\obj\x86\Debug\BuscaminasGame.SaveScore.resources
+E:\Prog3\tspprog3\BuscaminasGame\bin\Debug\BuscaminasGame.exe.manifest
+E:\Prog3\tspprog3\BuscaminasGame\bin\Debug\BuscaminasGame.application
+E:\Prog3\tspprog3\BuscaminasGame\obj\x86\Debug\BuscaminasGame.exe.manifest
+E:\Prog3\tspprog3\BuscaminasGame\obj\x86\Debug\BuscaminasGame.application

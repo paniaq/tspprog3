@@ -8,9 +8,23 @@ namespace BuscaminasGame
     public interface IGame
     {
 
+        int Time
+        {
+            get;
+            set;
+        }
+
+        bool IsOver
+        {
+            get;
+            set;
+        }
+
+        int AvailableFlags();
+
         void NewGame(Difficulty difficulty);
 
-        void SaveGameState();
+        void SaveGameState(int time);
 
         IGame ResumeGame();
 
@@ -18,7 +32,7 @@ namespace BuscaminasGame
 
         bool Click(int x, int y, bool flag);
 
-        void GameOver();        
+        bool GameOver();        
 
     }
 }
